@@ -10,11 +10,12 @@ def calcularIMC(values):
 
 import PySimpleGUI as sg
 
-linha0 = [sg.Text("Qual seu peso?"), sg.InputText("", key="peso"), sg.Text("Kg")]
+linha0 = [sg.Text("Qual seu peso?")], sg.InputText("", key="peso"), sg.Text("Kg")]
 linha1 = [sg.Text("Qual sua altura?"), sg.InputText("", key="altura"), sg.Text("cm")]
 linha2 = [sg.Text("Seu IMC é"),sg.Text('', key="imc", size=(6,1))]
 linha3 = [sg.Text('', size=(14,1)), sg.Button("Calcular IMC")]
 container = [linha0, linha1, linha2, linha3]
+
 
 # Janela principal
 window = sg.Window("Calculadora de IMC", container,font=("Helvetica", 14))
