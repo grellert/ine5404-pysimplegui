@@ -24,6 +24,15 @@ class DAO(ABC):
     def add(self, key, obj):
         self.objCache[key] = obj
         self.__dump()
+        
+       
+    def remove(self, key):
+        try:
+            self.objCache.pop(key)
+            self.__dump()
+            return True
+        except KeyError:
+            raise
 
     def get(self, key):
         try:
